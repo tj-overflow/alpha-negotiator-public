@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++: Build active subfolder (PowerShell)",
+            "type": "shell",
+            // This command finds and compiles all .cpp files ONLY in the active file's directory.
+            "command": "g++ -std=c++23 (Get-ChildItem -Path \"${fileDirname}\" -Filter *.cpp).FullName -o \"${fileDirname}\\${fileDirnameBasename}.exe\" -g -fdiagnostics-color=always",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                // This block forces the task to run in PowerShell.
+                "shell": {
+                    "executable": "powershell.exe",
+                    "args": [
+                        "-Command"
+                    ]
+                }
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
