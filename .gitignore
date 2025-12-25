@@ -1,0 +1,9 @@
+# Ignore VS Code settings
+.vscode/
+
+# Ignore Python artifacts
+__pycache__/
+*.pyc
+.env
+venv/
+.DS_Store
