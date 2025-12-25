@@ -1,1 +1,1 @@
-"# New Project" 
+"# AlphaNegotiator public" 
