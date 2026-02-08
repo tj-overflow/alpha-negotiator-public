@@ -1,1 +1,1 @@
-"# AlphaNegotiator public" 
+"# OmegaNegotiator public" 
